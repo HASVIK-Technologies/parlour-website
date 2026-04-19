@@ -1,0 +1,122 @@
+{
+    "brand": {
+        "name": "Glow Beauty Salon",
+        "tagline": "Where Beauty Meets Elegance",
+        "logo": "/logo.png"
+    },
+    "theme": {
+        "primary": "#000000",
+        "secondary": "#FADADD",
+        "background": "#FFFFFF",
+        "accent": "#F8E7E9",
+        "primaryButton": "text-black shadow-lg bg-gradient-to-l from-amber-200 via-amber-300 to-amber-200",
+        "secondaryButton": "border border-black text-black",
+        "buttonGradient": "bg-gradient-to-t from-amber-300 via-amber-200 to-amber-300",
+        "textGradient": "bg-gradient-to-r from-[#CFAF6D] via-[#FFD700] to-[#CFAF6D] bg-clip-text text-transparent",
+        "mainSubtitle": "bg-gradient-to-r from-[#CFAF6D] to-[#FFD700] bg-clip-text text-transparent",
+        "mainTitle": {
+            "light": [
+                "text-gray-800",
+                "bg-gradient-to-r from-[#CFAF6D] to-[#FFD700] bg-clip-text text-transparent"
+            ],
+            "dark": [
+                "text-gray-100",
+                "bg-gradient-to-r from-[#CFAF6D] to-[#FFD700] bg-clip-text text-transparent"
+            ]
+        }
+    },
+    "navigation": [
+        {
+            "label": "Home",
+            "link": "/"
+        },
+        {
+            "label": "Services",
+            "link": "/services"
+        },
+        {
+            "label": "Gallery",
+            "link": "/gallery"
+        },
+        {
+            "label": "Booking",
+            "link": "/booking"
+        }
+    ],
+    "hero": {
+        "background": "bg-gradient-to-l from-white/60 via-white/80 to-white",
+        "mainSubtitle": "Enhance Your Natural",
+        "title": [
+            "Beauty",
+            "&",
+            "Confidence"
+        ],
+        "subtitle": "Premium salon experiences crafted just for you",
+        "ctaPrimary": "Book Appointment",
+        "ctaSecondary": "Explore Services",
+        "images": [
+            "banner1.jpg",
+            "banner2.jpg",
+            "banner3.jpg"
+        ]
+    },
+    "services": {
+        "background": "bg-linear-to-l from-white via-white/70 to-white",
+        "title": [
+            "Let's",
+            " Explore",
+            " What We",
+            "Offer"
+        ],
+        "mainSubtitle": "Our Services",
+        "contents": [
+            {
+                "name": "Hair Styling",
+                "price": "₹500",
+                "description": "Trendy and professional styling",
+                "images": "/hairstyle.jpg"
+            },
+            {
+                "name": "Facial Treatment",
+                "price": "₹1200",
+                "description": "Glow-enhancing skincare",
+                "images": "/facial.jpg"
+            },
+            {
+                "name": "Bridal Makeup",
+                "price": "₹8000",
+                "description": "Complete bridal transformation",
+                "images": "/bridalmakup.jpg"
+            },
+            {
+                "name": "Body Waxing",
+                "price": "₹8000",
+                "description": "Complete body waxing",
+                "images": "/bodywaxing.jpg"
+            }
+        ]
+    },
+    "gallery": {
+        "title": ["Crafting elegance and transformation at a time"],
+        "subtitle": "Our Signature Work",
+        "highlightTitle": "Bridal Signature Look",
+        "highlightDescription": "Experience the art of flawless beauty designed for your most special moments.",
+        "highlightVideo": "-FnrCZJw6TE",
+        "videos": [
+            "dQw4w9WgXcQ",
+            "LXb3EKWsInQ",
+            "ScMzIvxBSi4",
+            "aqz-KE-bpKQ",
+            "LXb3EKWsInQ",
+            "dQw4w9WgXcQ"
+        ]
+    },
+    "booking": {
+        "title": "Book your Appointment on Whatsapp",
+        "subtitle": "Book Your Appointment",
+        "buttonText": "Confirm Booking"
+    },
+    "footer": {
+        "text": "© 2026 Glow Beauty Salon. All rights reserved."
+    }
+}

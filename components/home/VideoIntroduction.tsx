@@ -5,7 +5,7 @@ import Button from "@/components/Button";
 
 export default function VideoSection() {
   return (
-    <section className="relative w-full p-0 h-[70vh] md:h-screen overflow-hidden bg-black">
+    <section className="relative w-full p-0 h-[70vh] md:h-screen max-h-200 overflow-hidden bg-black">
       {/* VIDEO */}
       <iframe
         className="absolute top-1/2 left-1/2 w-[120vw] h-[120vh] -translate-x-1/2 -translate-y-1/2 pointer-events-none"

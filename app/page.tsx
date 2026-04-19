@@ -8,7 +8,7 @@ import VideoIntroduction from "@/components/home/VideoIntroduction";
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-white">
       <Navbar />
       <VideoIntroduction />
       <Hero />

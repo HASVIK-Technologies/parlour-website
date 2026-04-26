@@ -6,6 +6,7 @@ import VideoCard from "@/components/gallery/VideoCard";
 import MainTitle from "@/components/MainTitle";
 import Subtitle from "@/components/Subtitle";
 
+
 export default function Gallery() {
   return (
     <section id="gallery" className="py-8 md:py-12 px-4 sm:px-6 bg-black">

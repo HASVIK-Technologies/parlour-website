@@ -15,24 +15,36 @@ export default function Navbar() {
   return (
     <>
       {/* 🔹 TOP BAR (NORMAL FLOW) */}
-      <div className="hidden md:flex justify-between items-center px-6 md:px-12 py-2 text-sm border-b border-gray-100 bg-white">
-        <div className="text-gray-600">
-          📞 +91 9454263965 &nbsp; | &nbsp; ✉️ salon@email.com
+      <div className="hidden lg:flex justify-between items-center px-6 lg:px-12 py-1 text-sm border-b border-gray-100 bg-white/95 backdrop-blur-sm">
+        <div className="text-gray-600 flex items-center gap-4">
+          <span className="flex items-center gap-1">
+            📞 <span className="font-medium">+91 9454263965</span>
+          </span>
+          <span className="text-gray-300">|</span>
+          <span className="flex items-center gap-1">
+            ✉️ <span className="font-medium">salon@email.com</span>
+          </span>
         </div>
 
-        <div className="flex items-center gap-4 text-gray-600">
-          <FaInstagram className="hover:scale-110 transition" />
-          <FaFacebookF className="hover:scale-110 transition" />
-          <FaWhatsapp className="hover:scale-110 transition" />
+        <div className="flex items-center gap-6 text-gray-600">
+          <a href={config.brand.contact.instagram.link} className="hover:scale-110 transition-transform duration-200 hover:text-yellow-600">
+            <FaInstagram size={18} />
+          </a>
+          <a href={config.brand.contact.facebook.link} className="hover:scale-110 transition-transform duration-200 hover:text-yellow-600">
+            <FaFacebookF size={18} />
+          </a>
+          <a href={config.brand.contact.whatsapp.link} className="hover:scale-110 transition-transform duration-200 hover:text-yellow-600">
+            <FaWhatsapp size={18} />
+          </a>
         </div>
       </div>
 
       {/* 🔹 NAVBAR (STICKY — SAME AS RM SUNCITY) */}
-      <nav className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
-        <div className="flex justify-between items-center px-6 md:px-12 py-4">
+      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100">
+        <div className="flex justify-between items-center px-6 lg:px-12 py-2">
           {/* LOGO */}
-          <h1 className="text-xl md:text-2xl font-bold tracking-wide">
-            <span className="text-black">
+          <h1 className="text-2xl lg:text-3xl font-bold tracking-wide hover:scale-105 transition-transform duration-300">
+            <span className="text-gray-900">
               {config.brand.name.split(" ")[0]}
             </span>{" "}
             <span className={config.theme.textGradient}>
@@ -41,7 +53,7 @@ export default function Navbar() {
           </h1>
 
           {/* DESKTOP NAV */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-10">
             {config.navigation.map((nav, i) => {
               const isActive = pathname === nav.link;
 
@@ -49,10 +61,10 @@ export default function Navbar() {
                 <a
                   key={i}
                   href={nav.link}
-                  className={`relative font-semibold transition ${
+                  className={`relative font-semibold text-lg transition-all duration-300 ${
                     isActive
                       ? config.theme.textGradient
-                      : "text-gray-700 hover:text-black"
+                      : "text-gray-700 hover:text-gray-900"
                   }`}
                 >
                   {nav.label}
@@ -60,7 +72,8 @@ export default function Navbar() {
                   {isActive && (
                     <motion.span
                       layoutId="nav-active"
-                      className="absolute left-0 right-0 -bottom-1 h-[2px] bg-gradient-to-r from-yellow-400 to-yellow-600"
+                      className="absolute left-0 right-0 -bottom-2 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full"
+                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
                     />
                   )}
                 </a>
@@ -70,9 +83,9 @@ export default function Navbar() {
 
           {/* CTA + MOBILE */}
           <div className="flex items-center gap-4">
-            <Button text="Book Now" />
+            <Button text="Book Now" href={config.brand.contact.whatsapp.link} />
 
-            <button className="md:hidden" onClick={() => setOpen(!open)}>
+            <button className="lg:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors" onClick={() => setOpen(!open)}>
               {open ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -85,18 +98,21 @@ export default function Navbar() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-white shadow-lg overflow-hidden"
+              transition={{ duration: 0.3 }}
+              className="lg:hidden bg-white/95 backdrop-blur-md shadow-xl overflow-hidden border-t border-gray-100"
             >
-              {config.navigation.map((nav, i) => (
-                <a
-                  key={i}
-                  href={nav.link}
-                  onClick={() => setOpen(false)}
-                  className="block px-6 py-3 text-gray-800 hover:text-black"
-                >
-                  {nav.label}
-                </a>
-              ))}
+              <div className="px-6 py-4 space-y-4">
+                {config.navigation.map((nav, i) => (
+                  <a
+                    key={i}
+                    href={nav.link}
+                    onClick={() => setOpen(false)}
+                    className="block py-3 text-lg text-gray-800 hover:text-yellow-600 transition-colors border-b border-gray-50 last:border-b-0"
+                  >
+                    {nav.label}
+                  </a>
+                ))}
+              </div>
             </motion.div>
           )}
         </AnimatePresence>

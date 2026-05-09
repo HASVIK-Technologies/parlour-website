@@ -18,7 +18,7 @@ export default function MainTitle({
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8, delay: 0.5 }}
       viewport={{ once: true }}
-      className={`text-3xl lg:text-4xl text-black font-semibold text-${align} ${margin}`}
+      className={`text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-black leading-tight text-${align} ${margin}`}
     >
       {typeof title === "string" ? (
         <span className={config.theme.mainTitle[theme][0]}>{title}</span>

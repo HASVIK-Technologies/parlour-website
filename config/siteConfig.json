@@ -2,7 +2,25 @@
     "brand": {
         "name": "Glow Beauty Salon",
         "tagline": "Where Beauty Meets Elegance",
-        "logo": "/logo.png"
+        "logo": "/logo.png",
+        "favicon": "/favicon.ico",
+        "contact": {
+            "phone": "+91 98765 43210",
+            "email": "info@glowbeautysalon.com",
+            "address": "123 Glamour Street, Beauty City, Country",
+            "whatsapp": {
+                "number": "919876543210",
+                "link": "https://wa.me/919876543210"
+            },
+            "instagram": {
+                "handle": "@glowbeautysalon",
+                "link": "https://www.instagram.com/glowbeautysalon"
+            },
+            "facebook": {
+                "handle": "@glowbeautysalon",
+                "link": "https://www.facebook.com/glowbeautysalon"
+            }
+        }
     },
     "theme": {
         "primary": "#000000",
@@ -51,7 +69,7 @@
             "&",
             "Confidence"
         ],
-        "subtitle": "Premium salon experiences crafted just for you",
+        "subtitle": "Premium salon experiences crafted just for you. Book your appointment today and let us pamper you with our expert services. Your beauty journey starts here!",
         "ctaPrimary": "Book Appointment",
         "ctaSecondary": "Explore Services",
         "images": [
@@ -106,9 +124,7 @@
             "dQw4w9WgXcQ",
             "LXb3EKWsInQ",
             "ScMzIvxBSi4",
-            "aqz-KE-bpKQ",
-            "LXb3EKWsInQ",
-            "dQw4w9WgXcQ"
+            "aqz-KE-bpKQ"
         ]
     },
     "booking": {

@@ -10,106 +10,96 @@ import MainTitle from "@/components/MainTitle";
 
 export default function Hero() {
   return (
-    <section
-      className={`relative md:max-h-156`}
-      style={{
-        background: "url(/images/background.png)",
-      }}
-    >
-      <div className={`${config.hero.background} px-3 pt-3 pb-12 h-full w-full`}>
-        {/* IMAGES */}
-        <div className="h-100 md:h-120 flex">
-          {/* IMAGE 1 */}
-          <div className="relative w-1/3 h-full">
-            <motion.div
-              initial={{ x: -100, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="absolute inset-0"
-              style={{
-                clipPath: "polygon(0% 0%, 78% 0%, 100% 74%, 0% 58%)",
-              }}
-            >
-              <Image
-                src={`/images/${config.hero.images[0]}`}
-                alt="Bridal"
-                fill
-                className="object-cover"
-              />
-            </motion.div>
-          </div>
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Background with subtle gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-white"></div>
 
-          {/* IMAGE 2 */}
-          <div className="relative w-1/3 h-full z-10">
-            <motion.div
-              initial={{ x: -100, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="absolute -left-[20%] right-0 bottom-[1%] md:bottom-0 top-0"
-              style={{
-                clipPath: "polygon(0% 0%, 78% 0%, 100% 90%, 19% 75%)",
-              }}
-            >
-              <Image
-                src={`/images/${config.hero.images[1]}`}
-                alt="Facial"
-                fill
-                className="object-cover"
-              />
-            </motion.div>
-          </div>
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {/* Left Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center lg:text-left order-2 lg:order-1"
+          >
+            <Subtitle text={config.hero.mainSubtitle} />
 
-          {/* IMAGE 3 */}
-          <div className="relative w-1/3 h-full z-20">
-            <motion.div
-              initial={{ x: -100, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="absolute -left-[24%] right-0 -bottom-[5%] md:-bottom-[28%] top-0"
-              style={{
-                clipPath:
-                  "polygon(100% 0%, 100% 100%, 76% 95%, 49% 90%, 26% 86%, 0% 0%)",
-              }}
-            >
-              <Image
-                src={`/images/${config.hero.images[2]}`}
-                alt="Hair"
-                fill
-                className="object-cover"
+            <MainTitle title={config.hero.title} margin="mb-6" />
+
+            <p className="text-gray-600 text-lg mb-8 max-w-md mx-auto lg:mx-0 leading-relaxed">
+              {config.hero.subtitle}
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <Button
+                text={config.hero.ctaPrimary}
+                appendIcon={FaArrowRightLong}
               />
-            </motion.div>
-          </div>
+              <Button
+                text={config.hero.ctaSecondary}
+                type="secondary"
+                appendIcon={FaArrowRightLong}
+              />
+            </div>
+          </motion.div>
+
+          {/* Right Images */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative order-1 lg:order-2"
+          >
+            <div className="relative h-96 sm:h-[500px] lg:h-[600px]">
+              {/* Main Image */}
+              <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src={`/images/${config.hero.images[1]}`}
+                  alt="Beauty Service"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
+
+              {/* Floating Card 1 */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 w-32 h-32 sm:w-40 sm:h-40 rounded-xl overflow-hidden shadow-xl border-4 border-white"
+              >
+                <Image
+                  src={`/images/${config.hero.images[0]}`}
+                  alt="Bridal Service"
+                  fill
+                  className="object-cover"
+                />
+              </motion.div>
+
+              {/* Floating Card 2 */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 w-32 h-32 sm:w-40 sm:h-40 rounded-xl overflow-hidden shadow-xl border-4 border-white"
+              >
+                <Image
+                  src={`/images/${config.hero.images[2]}`}
+                  alt="Hair Service"
+                  fill
+                  className="object-cover"
+                />
+              </motion.div>
+            </div>
+          </motion.div>
         </div>
-
-        {/* TEXT */}
-        <motion.div
-          initial={{ x: -100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 1, duration: 0.8 }}
-          className="relative z-30 max-w-120 mx-5 mt-0 md:-mt-28"
-        >
-          <Subtitle text={config.hero.mainSubtitle} />
-
-          <MainTitle title={config.hero.title} margin="mb-3" />
-
-          <p className="mt-4 text-gray-700 text-md">{config.hero.subtitle}</p>
-
-          <div className="mt-8 grid md:grid-cols-2 gap-4">
-            <Button
-              text={config.hero.ctaPrimary}
-              appendIcon={FaArrowRightLong}
-            />
-            <Button
-              text={config.hero.ctaSecondary}
-              type="secondary"
-              appendIcon={FaArrowRightLong}
-            />
-          </div>
-        </motion.div>
       </div>
     </section>
   );

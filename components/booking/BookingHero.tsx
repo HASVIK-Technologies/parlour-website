@@ -5,7 +5,7 @@ import { Calendar, Clock, Phone } from "lucide-react";
 
 export default function BookingHero() {
   return (
-    <section className="relative min-h-100 h-screen md:h-150 lg:h-175 flex items-center overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-900">
+    <section className="relative min-h-100 h-screen sm:h-150 lg:h-175 flex items-center overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-900">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 via-transparent to-yellow-600/20"></div>

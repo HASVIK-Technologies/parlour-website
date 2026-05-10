@@ -10,7 +10,7 @@ import MainTitle from "@/components/MainTitle";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative flex items-center overflow-hidden">
       {/* Background with subtle gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-white"></div>
 

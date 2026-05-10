@@ -10,7 +10,7 @@ export default function VideoSection() {
 
 
   return (
-    <section className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-black">
+    <section className="relative w-full min-h-100 h-screen sm:h-150 lg:h-175 flex items-center justify-center overflow-hidden bg-black">
       {/* Background Image as Fallback */}
       <div
         className={`absolute inset-0 bg-cover bg-center ${isPlaying ? "hidden" : "block"}`}

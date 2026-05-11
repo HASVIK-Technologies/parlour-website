@@ -35,11 +35,13 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button
                 text={config.hero.ctaPrimary}
+                href={config.brand.contact.whatsapp.link}
                 appendIcon={FaArrowRightLong}
               />
               <Button
                 text={config.hero.ctaSecondary}
                 type="secondary"
+                href="/services"
                 appendIcon={FaArrowRightLong}
               />
             </div>

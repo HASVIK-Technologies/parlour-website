@@ -87,7 +87,7 @@ export default function ServicesList() {
                     </div>
                   </div>
 
-                  <Button text="Book Now" />
+                  <Button text="Book Now" href={config.brand.contact.whatsapp.link} />
                 </motion.div>
               ))}
             </div>

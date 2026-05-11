@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Button from "@/components/Button";
+import config from "@/lib/config";
 
 export default function ServicesCTA() {
   return (
@@ -22,8 +23,8 @@ export default function ServicesCTA() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button text="Book Appointment" />
-            <Button text="Call Now: +91 9454263965" type="secondary" />
+            <Button text="Book Appointment" href={config.brand.contact.whatsapp.link} />
+            <Button text={`Call Now: ${config.brand.contact.phone}`} type="secondary" />
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 text-center">

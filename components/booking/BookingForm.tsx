@@ -50,7 +50,7 @@ export default function BookingForm() {
 📝 Notes: ${form.notes || "None"}
     `;
 
-    const url = `https://wa.me/919454263965?text=${encodeURIComponent(
+    const url = `https://wa.me/${config.brand.contact.whatsapp.number}?text=${encodeURIComponent(
       message,
     )}`;
 
@@ -251,20 +251,20 @@ export default function BookingForm() {
                 </div>
               </div>
 
-              <div className="bg-gray-50 p-6 rounded-2xl">
+              <div className="bg-white p-6 rounded-2xl border-2 border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Need Help?</h3>
                 <div className="space-y-3">
                   <div className="flex items-center">
                     <Phone className="w-4 h-4 text-yellow-500 mr-2" />
-                    <span className="text-sm">+91 9454263965</span>
+                    <span className="text-base font-bold text-gray-900">+91 9454263965</span>
                   </div>
                   <div className="flex items-center">
                     <Mail className="w-4 h-4 text-yellow-500 mr-2" />
-                    <span className="text-sm">salon@email.com</span>
+                    <span className="text-base font-bold text-gray-900">salon@email.com</span>
                   </div>
                   <div className="flex items-center">
                     <Clock className="w-4 h-4 text-yellow-500 mr-2" />
-                    <span className="text-sm">Mon-Sun: 9AM-9PM</span>
+                    <span className="text-base font-bold text-gray-900">Mon-Sun: 9AM-9PM</span>
                   </div>
                 </div>
               </div>

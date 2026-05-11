@@ -47,7 +47,7 @@ export default function Services() {
                         <span className="text-2xl font-bold text-gray-900">
                           {service.price}
                         </span>
-                        <Button text="Book Now" />
+                        <Button text="Book Now" href={config.brand.contact.whatsapp.link} />
                       </div>
                     </div>
                   </div>

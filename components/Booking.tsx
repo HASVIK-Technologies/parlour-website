@@ -43,7 +43,7 @@ export default function Booking() {
 ⏰ Time: ${form.time}
     `;
 
-    const url = `https://wa.me/919454263965?text=${encodeURIComponent(
+    const url = `https://wa.me/${config.brand.contact.whatsapp.number}?text=${encodeURIComponent(
       message,
     )}`;
 

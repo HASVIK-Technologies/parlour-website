@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Button from "@/components/Button";
+import config from "@/lib/config";
 
 export default function ServicesHero() {
   return (
@@ -37,8 +38,8 @@ export default function ServicesHero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button text="Book Appointment" />
-              <Button text="View All Services" type="secondary" />
+              <Button text="Book Appointment" href={config.brand.contact.whatsapp.link} />
+              <Button text="View All Services" type="secondary" href="#services" />
             </div>
           </motion.div>
         </div>
